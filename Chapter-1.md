@@ -1,15 +1,15 @@
 #### 1. Getting Started
-- [Installing pip]
-- [Installing Django]
-- [Creating a Django project]
-- [Understanding your project]
-- [Creating an application inside our project]
-- [Understanding the parts of an application]
-- [Revision]
+- [Installing pip](#installing-pip)
+- [Installing Django](#installing-django)
+- [Creating a Django project](#creating-a-django-project)
+- [Understanding your project](#understanding-your-project)
+- [Creating an application inside our project](#creating-an-application-inside-our-project)
+- [Understanding the parts of an application](#understanding-the-parts-of-an-application)
+- [Review Chapter 1](#review-chapter-1)
 
 
 ## 1. Getting Started
-### 1.0.Installing Pip
+### Installing Pip
 NOTE: This instructions are for users running some version of MacOS (or OSX).\
 In order to install Django on your system we first need to check if we already have `pip` (Python's Package Installer) present in our system.\
 To check if `pip` is in your system run the following command in the terminal:
@@ -20,7 +20,7 @@ If you have `pip` in your system, you will be able to see a message similar to t
 
 > ```pip 9.0.1 from /Library/Python/2.7/site-packages (python 2.7)```
 
-If this is your case, you're all set. You can move on to section 1.1.
+If this is your case, you're all set. You can move on to [the next section](#installing-django)
 If this is not your case, you'll need to install `pip` by downloading the `get-pip.py` source code from the following URL (you can do this from your preferred browser):
 
 > ```https://bootstrap.pypa.io/get-pip.py```
@@ -35,7 +35,7 @@ Once the installation of `pip` is complete (or after you've certified that you h
 
 > ```pip install django==1.11```
 
-### 1.2. Creating a Django project
+### Creating a Django project
 In order to create our first Django project we need to determine where it is going to be located. Once that has been determined, you should also think about what name you will give to your project. In this example our project will be called, you guessed it, PROJECT.
 
 So, to create our project called PROJECT we will go back to our terminal and run the following command:
@@ -101,7 +101,7 @@ The `debug` language for your Django project is `en-us` (English US), by default
 
 Note that on your welcome message, you have been instructed to create a new django app. We will be creating our first app soon. But we first need to understand our project a bit better.
 
-### 1.3. Understanding your project
+### Understanding your project
 Remember when we ran the command: `django-admin startproject PROJECT`. This created our Django project.
 
 Think of our project as a container. The Django project should contain our applications, our configurations (settings), our templates, our css, our javascript..., etc. As you see, the project directory is where your website will live. Here's a rough look at how a project directory may look like (folders are marked with a forward `slash /`):
@@ -145,7 +145,7 @@ We will go over what those folders and files mean soon. It is important that you
 
 In the upcoming section we'll be creating our first Django app so we can get more functionality out of our project.
 
-### 1.4. Creating an application inside our project
+### Creating an application inside our project
 An application, from now on referred to simply as **App**, is a specific feature within your project. For example, a `Blog`, a `Forum`, a `Wiki`, a `Store`.
 
 For this example you'll create a blog **App**. To do so, navigate to your main project directory (where `manage.py` is located). Run the command:
@@ -189,22 +189,20 @@ INSTALLED_APPS = [
 
 As you can now see, your App, Blog_App, was created in your project directory and has been populated with the required files for it to work properly. We'll be editing some of those files so we can get our application running soon.
 
-### 1.5. Understanding the parts of an application
+### Understanding the parts of an application
 Django uses a `Model-View-Template` architecture. To better understand what MVT means and how it differs from the common MVC pattern, refer to the [official documentation](https://docs.djangoproject.com/en/1.11/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names).
 
 An **App** has the following parts:
 - `models.py`, class (object) declarations.
-- `admin.py`, administrative interface for that app (admin panel).
+- `admin.py`, administrative interface for that app (admin dashboard).
 - `views.py`, functions that return HTTP responses and render the HTML pages.
 - `tests.py`, (we don't need to worry about this for now).
 - `/migrations`, migrations are instructions to the database about changes in the App models. This is a directory, not a file.
 
 
-### 1.X. Revision
+### Review Chapter 1
 - What is pip?
 - How are the project and the application related?
 - Change the debug language of your application. Test the results in your browser.
-- Create a new application inside your project. Make it relevant to your project. Add at least one model to the admin panel/dashboard from this new application.
+- Create a new application inside your project. Make it relevant to your project. Add at least one model to the admin dashboard from this new application.
 ________________________
-
-
