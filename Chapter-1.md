@@ -150,7 +150,7 @@ An application, from now on referred to simply as **App**, is a specific feature
 
 For this example you'll create a blog **App**. To do so, navigate to your main project directory (where `manage.py` is located). Run the command:
 
-> python manage.py startapp Blog_App
+> `python manage.py startapp Blog_App`
 
 Your project directory should now look like this:
 

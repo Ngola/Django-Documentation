@@ -100,7 +100,7 @@ NOTE: To ensure that everything works as expected, stop your server, if it is ru
 
 Like so:
 
-> python manage.py makemigrations
+> `python manage.py makemigrations`
 
 Here's a brief look at the migration instructions:
 
@@ -113,7 +113,7 @@ Migrations for 'Blog_App':
 
 Now we apply the migrations like so:
 
-> python manage.py migrate
+> `python manage.py migrate`
 
 Here's a brief look at the instructions being sent to the database. These are our migrations:
 
