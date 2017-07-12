@@ -1,6 +1,6 @@
 #### 1. Getting Started
-- [Installing pip](#1.0.installing-pip)
-- [Installing Django](#1.1.installing-django)
+- [Installing pip]
+- [Installing Django]
 - [Creating a Django project]
 - [Understanding your project]
 - [Creating an application inside our project]
