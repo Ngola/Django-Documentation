@@ -1,4 +1,4 @@
-#### 1. Getting Started
+## 1. Getting Started
 - [Installing pip](#installing-pip)
 - [Installing Django](#installing-django)
 - [Creating a Django project](#creating-a-django-project)

@@ -1,4 +1,4 @@
-admin dashboard### Django App Models
+## Django App Models
 - [Understanding Models inside an application](#understanding-models-inside-an-application)
 - [Understanding Model Fields](#Understanding-model-fields)
 - [Understanding Model Migrations](#understanding-model-migrations)

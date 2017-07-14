@@ -71,7 +71,7 @@ So far, the file `admin.py` should look as follows (I added some comments):
 from django.contrib import admin
 from Blog_App.models import *
 
-# Register your models here.    
+# Register your models here.
 admin.site.register(Article)
 admin.site.register(Author)
 ```
@@ -174,5 +174,3 @@ admin.site.register(Article, ArticleAdmin)
 - Add another class to the `admin.py` to manage the `Author` model.
 - Sort the articles in reverse order. If in ascending order, switch the order to descending.
 - In your own words, what is the admin dashboard?
-
-
