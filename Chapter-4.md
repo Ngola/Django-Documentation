@@ -2,6 +2,7 @@
 - [Understanding views inside an application](#understanding-views-inside-an-application)
 - [Returning HTML pages from views](#returning-html-pages-from-views)
 - [Links and Regular Expressions](#links-and-regular-expressions)
+- [Django HTML Syntax](#django-html-syntax)
 - [Review Chapter 4](#review-chapter-4)
 
 
@@ -290,10 +291,39 @@ The name `article_link` refers to the name of the url pattern in `urls.py`:
 
 `article.id` refers to the article in the `for-loop` and it's own id in the database.
 
-If we change the RegEx that outputs takes us to our articles, our links on the homepage will still work, so long as the name of the url pattern remains consistent with our HTML pages.
+If we change the RegEx that takes us to our articles, our links on the homepage will still work, so long as the name of the url pattern remains consistent in our HTML pages.
 
 ---
 
+### Django HTML Syntax
+
+The Django syntax inside of our HTML pages is quite simple to understand.
+
+Let's start by understanding when and how to use the lovely pairs of curly braces `{{ }}`. These are used when we want to output the value of a variable.
+
+For example, when we wanted the output the title of a post inside `index.html` we used `{{ article.title }}`. [Read more](https://docs.djangoproject.com/en/1.11/ref/templates/language/#variables).
+
+When we want to write some logical statements along with our HTML, we can use a pair of percent signs inside a pair of curly braces, like so: `{% %}`.
+
+For example, when we wanted to loop through our articles being returned from one of our views we used `{% for article in articles %}`. And because this is a `for-loop`, we need to determine where the code block must end with another statement `{% endfor %}`. The same applies to `if-statements`, which start with, for example, `{% if x == 0 %}`, and must end with `{% endif %}`.
+
+
+Django also has some built-in filters that we can apply to our variables through the use of the `|` (pipe) operator. [Read more](https://docs.djangoproject.com/en/1.11/ref/templates/builtins/).
+
+For example, we can try `{{ article.title | capfirst }}`. This will output the title of the article with the first letter of each word capitatized.
+
+TIP: a handy built-in feature with Django is the function `now`. It returns an aware or naive datetime.datetime, depending on settings.USE_TZ. [Read more](https://docs.djangoproject.com/en/1.11/_modules/django/utils/timezone/#now).
+My favorite use of `now` is to display the current year next to a copyright notice in the footer of my website pages. As with anything, your own mileage may vary.
+
+Just as an example, this is how I output the year using `now`:
+
+```
+{% now 'Y' %}
+```
+
+Simple as that.
+
+---
 ### Review Chapter 4
 - What is a view?
 - What should a view return?
