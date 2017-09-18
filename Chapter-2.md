@@ -9,18 +9,18 @@
 
 ## 2. Django App Models
 ### Understanding Models inside an application
-In section 1.4. we created our Blog_App. Now we are going to create our models inside our application. Models are essentially python classes that inherit from Django's models object. These models can be defined as blueprints of the objects you will want tostore in the database.
+In the previous section we created our Blog_App. Now we are going to create our models inside our application. Models are essentially Python classes that inherit from Django's models object. These models can be defined as blueprints of the objects you will want to store in the database.
 
-So, in our Blog_App, we are going to create two models: `Author` and `Article`. We will later use the admin dashboard to create our objects as needed.
+So, in our Blog_App, we are going to create two models: `Author` and `Article`. We will later use the admin dashboard to create instances of our objects as needed.
 
-Inside Blog_App, look for `models.py`. The file should have one line of code and a line with comments. Like so:
+Inside Blog_App, look for `models.py`. The file should have one line of code and a line with a comment. Like so:
 
 ```
 from django.db import models
 # Create your models here.
 ```
 
-We will declare our `Author` class under the comment:
+We will declare our `Author` class after the comment:
 
 ```
 class Author(models.Model):
