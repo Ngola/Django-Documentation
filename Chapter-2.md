@@ -49,7 +49,7 @@ id       |name            |job
 ```
 
 ### Understanding Model Fields
-Now we'll talk a little about the fields in our models. The type of a field is similar in concept to the type of a variable. So, an `IntegerField` is should only contain integer values. The same way, a `BooleanField` can only contain either **True** or **False** for values.
+Now we'll talk a little about the fields in our models. The type of a field is similar in concept to the type of a variable. So, an `IntegerField` should only contain integer values. The same way, a `BooleanField` can only contain either **True** or **False** for values.
 
 In our App we will mostly use the following fields:
 - `models.CharField`: holds any string and requires a max_length attribute.
@@ -57,7 +57,7 @@ In our App we will mostly use the following fields:
 - `models.EmailField`: used for emails. This field has input validation.
 - `models.URLField`: used for URLs. This field has input validation.
 - `models.FileField`: used for storing files. Validation occurs.
-- `models.ImageField`: inherits from FileField and used validation to check for image file.
+- `models.ImageField`: inherits from FileField and uses validation to check for valid image file.
 - `models.BooleanField`: regular Python field for storing True or False values (works well in conditional statements).
 - `models.DateField`: uses Python's date object.
 - `models.DateTimeField`: stores date, like DateField, but also stores time.
