@@ -47,14 +47,14 @@ Once your project has been created, you should have a folder in your system call
 Here's a rough view of your project's directory:
 
 ```
-PROJECT
-  manage.py
-  PROJECT
-    __init__.py
-    settings.py
-    urls.py
-    wsgi.py
+PROJECT/
+├── PROJECT
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
 ```
+
 As you can see, a file called `manage.py`was created inside project directory. We are going to use this file a lot, as it allows us to manage our project and applications inside it.
 
 If you're interested in knowing what `manage.py` can do, run the following command to list all the available options (run the command from within your project's directory):
@@ -155,21 +155,27 @@ For this example you'll create a blog **App**. To do so, navigate to your main p
 Your project directory should now look like this:
 
 ```
-/PROJECT
-  manage.py
-  /Blog_App
-    /migrations
-    __init__.py
-    admin.py
-    apps.py
-    models.py
-    tests.py
-    views.py
-  /PROJECT
-    __init__.py
-    settings.py
-    urls.py
-    wsgi.py
+PROJECT/
+├── Blog_App
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── PROJECT
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── static
+└── templates
+    └── Blog_App
+        └── index.html
 ```
 
 Now we need to let Django know that we plan to use this new **App** in our project.
